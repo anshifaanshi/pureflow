@@ -1,4 +1,4 @@
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Droplets } from "lucide-react";
 import { motion } from "framer-motion";
 import TiltedImage from "../components/tilt-image";
 
@@ -42,52 +42,66 @@ export default function HeroSection() {
                 viewport={{ once: true }}
                 transition={{ delay: 0.2, type: 'spring', stiffness: 320, damping: 70, mass: 1 }}
             >
-                <div className="size-2.5 bg-[#4682B4] rounded-full animate-pulse"></div>
-                <span>Trusted water purification technology</span>
+                <Droplets className="size-4 text-[#4682B4]" />
+                <span className="text-sm font-medium tracking-wide">Pure Flow: Wellness Starts from Water</span>
             </motion.a>
 
             {/* Heading */}
             <motion.h1
-                className="text-center text-5xl leading-[68px] md:text-6xl md:leading-[70px] mt-4 font-semibold max-w-2xl"
+                className="text-center text-5xl leading-[60px] md:text-7xl md:leading-[85px] mt-6 font-bold max-w-4xl tracking-tight"
                 initial={{ y: 50, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
                 viewport={{ once: true }}
                 transition={{ type: 'spring', stiffness: 240, damping: 70, mass: 1 }}
             >
-                Pure Flow Water Purifier
+                Elevating Your Health <br />
+                <span className="text-[#4682B4]">Through Every Drop.</span>
             </motion.h1>
 
             {/* Description */}
             <motion.p
-                className="text-center text-base max-w-lg mt-2 text-gray-300"
+                className="text-center text-lg max-w-2xl mt-4 text-gray-300 leading-relaxed"
                 initial={{ y: 50, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.2, type: 'spring', stiffness: 320, damping: 70, mass: 1 }}
             >
-                Experience crystal-clear, safe drinking water with advanced multi-stage filtration designed for modern homes.
+                As the dedicated wellness division of the Echo Futur group, Pure Flow provides 
+                advanced hydration and heating solutions designed to optimize your health. 
+                From cellular-level hydration to eco-friendly energy.
             </motion.p>
 
             {/* Buttons */}
             <motion.div
-                className="flex items-center gap-4 mt-8"
+                className="flex items-center gap-4 mt-10"
                 initial={{ y: 50, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
                 viewport={{ once: true }}
                 transition={{ type: 'spring', stiffness: 320, damping: 70, mass: 1 }}
             >
-                <button className="flex items-center gap-2 bg-[#4682B4] hover:bg-[#3A6F9E] transition text-white active:scale-95 rounded-lg px-7 h-11">
-                    Buy Now
+                <button className="flex items-center gap-2 bg-[#4682B4] hover:bg-[#3A6F9E] transition text-white font-semibold active:scale-95 rounded-lg px-8 h-12 shadow-lg">
+                    Shop Wellness
                     <ArrowRight className="size-5" />
                 </button>
 
-                <button className="border border-[#4682B4]/60 text-gray-100 active:scale-95 hover:bg-white/10 transition rounded-lg px-8 h-11">
-                Explore
+                <button className="border border-[#4682B4]/60 text-gray-100 font-semibold active:scale-95 hover:bg-white/10 transition rounded-lg px-8 h-12">
+                    Our Science
                 </button>
             </motion.div>
 
             {/* Product Image */}
-            <TiltedImage />
+            <div className="mt-16">
+                <TiltedImage />
+            </div>
+
+            <motion.p 
+                className="mt-8 text-xs uppercase tracking-[0.25em] text-slate-500 font-bold"
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ delay: 0.5 }}
+            >
+                A Proud Division of the Echo Futur Group
+            </motion.p>
         </section>
     );
 }
